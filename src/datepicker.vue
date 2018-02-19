@@ -13,8 +13,7 @@
 
 .datetime-picker input {
     width: 100%;
-    padding: 5px 10px;
-    height: 30px;
+    height: 36.4px;
     outline: 0 none;
     border: 1px solid #ccc;
     font-size: 13px;
@@ -23,7 +22,7 @@
 .datetime-picker .picker-wrap {
     position: absolute;
     z-index: 1000;
-    width: 238px;
+    width: inherit;
     height: 280px;
     margin-top: 2px;
     background-color: #fff;
@@ -116,7 +115,7 @@
             :style="styleObj"
             :readonly="readonly"
             :value="value"
-            @click="show = !show">
+            @click="show = !show" class="form-control">
         <div class="picker-wrap" v-show="show">
             <table class="date-picker">
                 <thead>
