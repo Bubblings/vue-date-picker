@@ -120,14 +120,14 @@
                 <thead>
                     <tr class="date-head" :style="{ backgroundColor: color}">
                         <th colspan="4">
-                            <span class="btn-prev" @click="yearClick(-1)">&lt;</span>
+                            <span class="btn-prev" :style="{ background: hoverColor }" @click="yearClick(-1)">&lt;</span>
                             <span class="show-year">{{now.getFullYear()}}</span>
-                            <span class="btn-next" @click="yearClick(1)">&gt;</span>
+                            <span class="btn-next" :style="{ background: hoverColor }" @click="yearClick(1)">&gt;</span>
                         </th>
                         <th colspan="3">
-                            <span class="btn-prev" @click="monthClick(-1)">&lt;</span>
+                            <span class="btn-prev" :style="{ background: hoverColor }" @click="monthClick(-1)">&lt;</span>
                             <span class="show-month">{{months[now.getMonth()]}}</span>
-                            <span class="btn-next" @click="monthClick(1)">&gt;</span>
+                            <span class="btn-next" :style="{ background: hoverColor }" @click="monthClick(1)">&gt;</span>
                         </th>
                     </tr>
                     <tr class="date-days" :style="{ color: color }">
@@ -155,7 +155,8 @@
             value: { type: String, default: '' },
             format: { type: String, default: 'YYYY-MM-DD' },
             name: { type: String, default: '' },
-            color: { type: String, default: '#3bb4f2'}
+            color: { type: String, default: '#3bb4f2'},
+            hoverColor: { type: String, default: '#a6a6a6'}
         },
         data () {
             return {
