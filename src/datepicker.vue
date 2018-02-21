@@ -161,7 +161,6 @@
                 months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 date: [],
                 now: new Date(),
-                hoverState: false,
                 yearArrowBackHover: false,
                 yearArrowForwardHover: false,
                 monthArrowBackwardHover: false,
