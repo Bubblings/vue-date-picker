@@ -111,7 +111,7 @@
     <div class="datetime-picker" :style="{ width: width }">
         <input
             type="text"
-            name="{{name}}"
+            :name="name"
             :style="styleObj"
             :readonly="readonly"
             :value="value"
