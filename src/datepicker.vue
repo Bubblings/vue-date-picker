@@ -66,7 +66,6 @@
 
 .datetime-picker td.date-active {
     background-color: #ececec;
-    color: #3bb4f2;
 }
 
 .datetime-picker .date-head {
@@ -119,7 +118,7 @@
         <div class="picker-wrap" v-show="show">
             <table class="date-picker">
                 <thead>
-                    <tr class="date-head">
+                    <tr class="date-head" :style="{ backgroundColor: color}">
                         <th colspan="4">
                             <span class="btn-prev" @click="yearClick(-1)">&lt;</span>
                             <span class="show-year">{{now.getFullYear()}}</span>
@@ -131,7 +130,7 @@
                             <span class="btn-next" @click="monthClick(1)">&gt;</span>
                         </th>
                     </tr>
-                    <tr class="date-days">
+                    <tr class="date-days" :style="{ color: color }">
                         <th v-for="day in days">{{day}}</th>
                     </tr>
                 </thead>
@@ -155,7 +154,8 @@
             readonly: { type: Boolean, default: false },
             value: { type: String, default: '' },
             format: { type: String, default: 'YYYY-MM-DD' },
-            name: { type: String, default: '' }
+            name: { type: String, default: '' },
+            color: { type: String, default: '#3bb4f2'}
         },
         data () {
             return {
