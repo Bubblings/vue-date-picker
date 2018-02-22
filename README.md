@@ -1,4 +1,4 @@
-# vue-date-picker [![npm package](https://img.shields.io/npm/v/vue-date-picker.svg)](https://www.npmjs.com/package/vue-date-picker)
+# date-picker-vue2
 
 > datepicker component for Vue.js.
 
@@ -15,7 +15,7 @@
 
 ## npm 
 ``` bash
-$ npm install vue-date-picker
+$ npm install date-picker-vue2
 ```
 
 # Usage
@@ -29,7 +29,7 @@ $ npm install vue-date-picker
 </template>
 
 <script>
-import datepicker from 'vue-date-picker';
+import datepicker from 'date-picker-vue2';
 
 export default {
     components: { datepicker }
