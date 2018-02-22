@@ -8,9 +8,10 @@
 
 # Requirements
 
-- [Vue.js](https://github.com/yyx990803/vue) `^1.0.0`
+- [Vue.js](https://github.com/yyx990803/vue) `^2.0.0`
+- [Bootstrap](https://github.com/twbs/bootstrap) `>=3.0`
 
-# Instllation
+# Installation
 
 ## npm 
 ``` bash
@@ -21,9 +22,10 @@ $ npm install vue-date-picker
 ``` html
 <template>
     <datepicker :readonly="true" format="YYYY-MM-DD"></datepicker>
-    <datepicker format="YYYY-M-D" value="2015-9-5"></datepicker>
-    <datepicker :readonly="true" format="MMM/D/YYYY" width="300px"></datepicker>
-    <datepicker :readonly="true" format="MMM/D/YYYY" width="300px" name="date"></datepicker>
+    <datepicker format="YYYY-M-D" v-model="date"></datepicker>
+    <datepicker :readonly="true" format="MM/DD/YYYY" width="300px"></datepicker>
+    <datepicker :readonly="true" format="MM/DD/YYYY" width="300px" name="date"></datepicker>
+    <datepicker width="inherit" color="#f48024" hoverColor="#e67e00" v-model="date"></datepicker>
 </template>
 
 <script>
