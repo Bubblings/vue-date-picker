@@ -1,5 +1,5 @@
 {
-  "name": "vue2-date-picker",
+  "name": "@finkr/vue2-date-picker",
   "version": "2.0.0",
   "description": "datepicker component for Vue.js",
   "author": "finkr",
