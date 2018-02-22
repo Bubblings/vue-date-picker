@@ -107,9 +107,8 @@
         <input
                 type="text"
                 :name="name"
-                :style="styleObj"
                 :readonly="readonly"
-                :value="value"
+                v-model="value"
                 @click="show = !show" class="form-control">
         <div class="picker-wrap" v-show="show">
             <table class="date-picker">
@@ -145,6 +144,10 @@
 
 <script>
     export default {
+        model: {
+            prop: "value",
+            event: "date-selected"
+        },
         props: {
             width: { type: String, default: '238px' },
             readonly: { type: Boolean, default: false },
@@ -164,7 +167,8 @@
                 yearArrowBackHover: false,
                 yearArrowForwardHover: false,
                 monthArrowBackwardHover: false,
-                monthArrowForwardHover: false
+                monthArrowForwardHover: false,
+                selectedDate: ""
             };
         },
         watch: {
@@ -270,6 +274,7 @@
                     j++;
                 }
                 this.date = arr;
+
             },
             yearClick (flag) {
                 this.now.setFullYear(this.now.getFullYear() + flag);
@@ -282,7 +287,8 @@
             pickDate (index) {
                 this.show = false;
                 this.now = new Date(this.date[index].time);
-                this.value = this.stringify();
+                this.selectedDate = this.stringify();
+                this.$emit('date-selected', this.selectedDate);
             },
             parse (str) {
                 var time = new Date(str);
