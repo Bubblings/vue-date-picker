@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bubblings/vue-date-picker.git"
+    "url": "git+https://github.com/rwfwcb/vue-date-picker.git"
   },
-  "homepage": "https://github.com/Bubblings/vue-date-picker",
+  "homepage": "https://github.com/rwfwcb/vue-date-picker",
   "bugs": {
-    "url": "https://github.com/Bubblings/vue-date-picker/issues"
+    "url": "https://github.com/rwfwcb/vue-date-picker/pulls"
   },
   "files": [
     "README.md",
