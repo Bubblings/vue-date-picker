@@ -283,6 +283,7 @@ export default {
       this.show = false
       this.now = new Date(this.date[index].time)
       this.pickedValue = this.stringify()
+      this.$emit('update:value', this.pickedValue)
     },
     parse (str) {
       let time = new Date(str)
